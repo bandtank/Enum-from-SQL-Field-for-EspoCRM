@@ -1,7 +1,7 @@
 # Enum-from-SQL-Field-for-EspoCRM
 Enum type field that can be populated by custom SQL statements specified in metadata 
 
-Instructions to use:
+Usage instructions:
 
 Go to Administration >> Entity Manager and select your target Entity, then click the Fields link.
 Click "Add Field" and select "Enum from SQL".
