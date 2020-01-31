@@ -13,8 +13,7 @@ The sample entity contains two select (enum) elements, one called "entityType" a
 
 Enum "entityType" contains a list of all entities defined in Espo.
 
-When an entity is chosen from the entity list, Enum "entitySubType" will be populated with the values of the field "type" contained 
-in records of that entity.
+When an entity is chosen from the entity list, Enum "entitySubType" will be populated with the various values of the field "type" found in all existing records of that entity.
 
 When a user selects a different entity in Enum "entityType", "entitySubType" will be re-populated
 
