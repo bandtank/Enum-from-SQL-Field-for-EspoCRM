@@ -3,13 +3,13 @@ Enum type field that can be populated by custom SQL statements specified in meta
 
 Usage instructions:
 
-Go to Administration >> Entity Manager and select your target Entity, then click the Fields link.
+Go to Administration >> Entity Manager and select your target Entity (eg: "MyEntity"), then click the Fields link.
 Click "Add Field" and select "Enum from SQL".
 Clear cache and rebuild.
 
-To specify the SQL statement and optional placeholders go to the target Entity entityDefs JSON file and follow the example below: 
+To specify the SQL statement and optional placeholders go to "MyEntity" entityDefs JSON file and follow the example below: 
 
-The sample entity contains two select (enum) elements, one called "entityType" and the second one called "entitySubType". 
+"MyEntity" includes two select (enum) elements, one called "entityType" and the second one called "entitySubType". 
 
 Enum "entityType" contains a list of all entities defined in Espo and those entities might have a field called "type".
 
@@ -34,24 +34,24 @@ Place holders "@@{{"  and "}}/@@" are used to dynamically define a field.
 	 
        },
    
-    "entitySubType": {
+       "entitySubType": {
 	 
-      "type": "enum-from-sql",
+          "type": "enum-from-sql",
 			
-      "required": true,
+          "required": true,
 			
-      "options": [],
+          "options": [],
 			
-      "isCustom": true,
+          "isCustom": true,
 			
-      "selectSQL": "SELECT type AS value FROM @@{{entityType}}/@@ GROUP BY type",
+          "selectSQL": "SELECT type AS value FROM @@{{entityType}}/@@ GROUP BY type",
 			
-      "placeholders":{
+          "placeholders":{
 			
-         "entityType":"model.attributes.entityType"
+              "entityType":"model.attributes.entityType"
 				 
-       }
+           }
 			 
-   }  
+       }  
 	 
-}   
+    }   
