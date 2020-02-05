@@ -11,11 +11,13 @@ To specify the SQL statement and optional placeholders go to the target Entity e
 
 The sample entity contains two select (enum) elements, one called "entityType" and the second one called "entitySubType". 
 
-Enum "entityType" contains a list of all entities defined in Espo.
+Enum "entityType" contains a list of all entities defined in Espo and those entities might have a field called "type".
 
-When an entity is chosen from the entity list, Enum "entitySubType" will be populated with the various values of the field "type" found in all existing records of that entity.
+When an entity is chosen from "entityType", enum "entitySubType" will be populated with the various values (if any) of the field "type" found in all existing records of the entity selected as "entityType"
 
-When a user selects a different entity in Enum "entityType", "entitySubType" will be re-populated
+When a user selects a different entity in Enum "entityType", "entitySubType" will be re-populated accordingly.
+
+Place holders "@@{{"  and "}}/@@" are used to dynamically define a field.
 
 
 "fields": {
