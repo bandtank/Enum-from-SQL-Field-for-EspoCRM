@@ -20,21 +20,21 @@ When a user selects a different entity in Enum "entityType", "entitySubType" wil
 Place holders "@@{{"  and "}}/@@" are used to dynamically define a field.
 
 
-```"fields": {
+    "fields": {
 
-"entityType": {
+       "entityType": {
 
-   "type": "enum",
+       "type": "enum",
 	 
-   "required": true,
+       "required": true,
 	 
-   "translation": "Global.scopeNames",
+       "translation": "Global.scopeNames",
 	 
-   "view": "views/fields/entity-type"
+       "view": "views/fields/entity-type"
 	 
-   },
+       },
    
-   "entitySubType": {
+    "entitySubType": {
 	 
       "type": "enum-from-sql",
 			
