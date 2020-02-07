@@ -70,7 +70,7 @@ Espo.define('enum-from-sql:views/fields/enum-from-sql', ['views/fields/enum','sq
                 options.queryType = "SELECT";
                 options.placeholders = payloadPlaceholders;
                 var payload = JSON.stringify(options); 
-                var url = '?entryPoint=sqlDataDispatcher';            
+                var url = '?entryPoint=EnumSqlDataDispatcher';            
                 this.translatedOptions = null;
                 var list = [];
                 var xmlhttp = new XMLHttpRequest();
