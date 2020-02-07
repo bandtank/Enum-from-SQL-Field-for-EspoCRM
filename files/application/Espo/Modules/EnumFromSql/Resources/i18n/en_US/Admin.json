@@ -1,0 +1,5 @@
+{
+    "fieldTypes": {
+        "enum-from-sql": "Enum from SQL"
+    }
+}
